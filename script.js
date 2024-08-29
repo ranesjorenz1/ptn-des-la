@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const imageContainer = document.getElementById('image-container');
-    const generatePdfButton = document.getElementById('generate-pdf');
     const startInput = document.getElementById('start');
     const endInput = document.getElementById('end');
     const { jsPDF } = window.jspdf;
