@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageContainer = document.getElementById('image-container');
     const startInput = document.getElementById('start');
     const endInput = document.getElementById('end');
-    const { jsPDF } = window.jspdf;
+   
 
     function generateImages(start, end) {
         imageContainer.innerHTML = ''; // Clear existing images
