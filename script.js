@@ -1,47 +1,63 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const imageContainer = document.getElementById('image-container');
-    const startInput = document.getElementById('start');
-    const endInput = document.getElementById('end');
-   
+document.addEventListener("DOMContentLoaded", () => {
+  const imageContainer = document.getElementById("image-container");
+  const startInput = document.getElementById("start");
+  const endInput = document.getElementById("end");
+  const atvInput = document.getElementById("atv");
 
-    function generateImages(start, end) {
-        imageContainer.innerHTML = ''; // Clear existing images
-        for (let i = start; i <= end; i++) {
-            const imageItem = document.createElement('div');
-            imageItem.className = 'image-item';
+  function generateImages(start, end, pricePerImage) {
+    imageContainer.innerHTML = ""; // Clear existing images
+    for (let i = start; i <= end; i++) {
+      const imageItem = document.createElement("div");
+      imageItem.className = "image-item";
 
-            const img = document.createElement('img');
-            img.src = 'image/ptn.png'; // Replace with your image path
-            img.alt = `Image ${i}`;
+      const img = document.createElement("img");
+      img.src = "image/ptn.png"; // Replace with your image path
+      img.alt = ` ${i}`;
 
-            const span1 = document.createElement('span');
-            span1.className = 'number1';
-            span1.textContent = i;
+      const span1 = document.createElement("span");
+      span1.className = "number1";
+      span1.textContent = ` ${i}`;
 
-            const span2 = document.createElement('span');
-            span2.className = 'number2';
-            span2.textContent = i;
+      const span2 = document.createElement("span");
+      span2.className = "number2";
+      span2.textContent = `${i}`;
 
-            imageItem.appendChild(img);
-            imageItem.appendChild(span1);
-            imageItem.appendChild(span2);
-            imageContainer.appendChild(imageItem);
-        }
+      const spanPrice1 = document.createElement("span");
+      spanPrice1.className = "price1";
+      if (!isNaN(pricePerImage)) {
+        spanPrice1.textContent = `(${pricePerImage})`;
+      } else {
+        spanPrice1.textContent = "Price: N/A"; // Default if price is not entered
+      }
+
+      const spanPrice2 = document.createElement("span");
+      spanPrice2.className = "price2";
+      if (!isNaN(pricePerImage)) {
+        spanPrice2.textContent = `(${pricePerImage})`;
+      } else {
+        spanPrice2.textContent = "Price: N/A"; // Default if price is not entered
+      }
+
+      imageItem.appendChild(img);
+      imageItem.appendChild(span1);
+      imageItem.appendChild(span2);
+      imageItem.appendChild(spanPrice1); // Add first price
+      imageItem.appendChild(spanPrice2); // Add second price
+      imageContainer.appendChild(imageItem);
     }
+  }
 
-    startInput.addEventListener('input', () => {
-        const start = parseInt(startInput.value);
-        const end = parseInt(endInput.value);
-        if (!isNaN(start) && !isNaN(end) && start <= end) {
-            generateImages(start, end);
-        }
-    });
+  function updateImages() {
+    const start = parseInt(startInput.value);
+    const end = parseInt(endInput.value);
+    const price = parseFloat(atvInput.value);
 
-    endInput.addEventListener('input', () => {
-        const start = parseInt(startInput.value);
-        const end = parseInt(endInput.value);
-        if (!isNaN(start) && !isNaN(end) && start <= end) {
-            generateImages(start, end);
-        }
-    });
+    if (!isNaN(start) && !isNaN(end) && start <= end) {
+      generateImages(start, end, price);
+    }
+  }
+
+  startInput.addEventListener("input", updateImages);
+  endInput.addEventListener("input", updateImages);
+  atvInput.addEventListener("input", updateImages);
 });

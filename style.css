@@ -1,35 +1,55 @@
 #image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .image-item {
-    position: relative;
-    margin: 10px;
+  position: relative;
+  margin: auto;
 }
 
 .image-item img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 453px;
+  height: auto;
+  display: block;
 }
 
-.image-item .number1, .image-item .number2 {
-    position: absolute;
-    padding: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    color:#99334c;
-    font-family: 'Times New Roman', Times, serif;
+.image-item .number1,
+.image-item .number2 {
+  position: absolute;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2f5597;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .image-item .number1 {
-    top: 58px;
-    left: 103px;
+  top: 58px;
+  left: 103px;
 }
 
 .image-item .number2 {
-    top: 58px;
-    left: 210px;
+  top: 58px;
+  left: 210px;
+}
+
+.price1,
+.price2 {
+  position: absolute;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #2f5597;
+  font-family: "Times New Roman", Times, serif;
+}
+.price1 {
+  top: 27px;
+  left: 104px;
+}
+.price2 {
+  top: 27px;
+  left: 210px;
 }
