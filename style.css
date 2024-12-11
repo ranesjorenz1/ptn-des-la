@@ -15,47 +15,100 @@
   display: block;
 }
 
-.image-item .number1,
-.image-item .number2 {
-  position: absolute;
-  padding: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #2f5597;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.image-item .number1 {
-  top: 58px;
-  left: 75px;
-}
-
-.image-item .number2 {
-  top: 58px;
-  left: 180px;
-}
-
 .price1,
 .price2,
-.signature {
+.signature,
+.onehour,
+.coupon,
+.number1,
+.number2 {
   position: absolute;
   padding: 5px;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   color: #2f5597;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.logotext {
+  position: absolute;
+  padding: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 30%;
+  font-weight: bolder;
+  top: 51px;
+  left: 10px;
+}
+.address {
+  position: absolute;
+  padding: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 17%;
+  top: 57px;
+  left: 16px;
+  font-weight: 900;
+}
+.contact {
+  position: absolute;
+  padding: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 15%;
+  top: 60px;
+  left: 18px;
+  font-weight: 900;
+}
+.logoboarder {
+  position: absolute;
+  width: 62px;
+  height: 61px;
+  border: 1.4px solid rgb(241, 59, 59);
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 20%;
+  top: 17px;
+  left: 10px;
+}
+
+.outerborder {
+  position: absolute;
+  width: 392px;
+  height: 84px;
+  border: 1.5px solid rgb(228, 80, 80);
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 15px;
+  top: 5px;
+  left: 4px;
 }
 .price1 {
-  top: 27px;
+  top: 32px;
   left: 75px;
 }
 .price2 {
-  top: 27px;
+  top: 32px;
   left: 180px;
 }
 .signature {
   top: 63px;
   left: 260px;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: bolder;
+}
+.onehour {
+  top: 5px;
+  left: 75px;
+}
+.coupon {
+  top: 5px;
+  left: 180px;
+}
+
+.number1 {
+  top: 58px;
+  left: 75px;
+}
+
+.number2 {
+  top: 58px;
+  left: 180px;
 }
