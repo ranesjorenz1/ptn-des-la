@@ -16,16 +16,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const span1 = document.createElement("span");
       span1.className = "number1";
-      span1.textContent = ` ${i}`;
+      span1.textContent = ` NO.${i}`;
+
+      const signature = document.createElement("span");
+      signature.className = "signature";
+      signature.textContent = `SIGNATURE:`;
 
       const span2 = document.createElement("span");
       span2.className = "number2";
-      span2.textContent = `${i}`;
+      span2.textContent = `NO.${i}`;
 
       const spanPrice1 = document.createElement("span");
       spanPrice1.className = "price1";
       if (!isNaN(pricePerImage)) {
-        spanPrice1.textContent = `(${pricePerImage})`;
+        spanPrice1.textContent = `ATV (${pricePerImage})`;
       } else {
         spanPrice1.textContent = "Price: N/A"; // Default if price is not entered
       }
@@ -33,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const spanPrice2 = document.createElement("span");
       spanPrice2.className = "price2";
       if (!isNaN(pricePerImage)) {
-        spanPrice2.textContent = `(${pricePerImage})`;
+        spanPrice2.textContent = `ATV (${pricePerImage})`;
       } else {
         spanPrice2.textContent = "Price: N/A"; // Default if price is not entered
       }
@@ -41,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       imageItem.appendChild(img);
       imageItem.appendChild(span1);
       imageItem.appendChild(span2);
+      imageItem.appendChild(signature);
       imageItem.appendChild(spanPrice1); // Add first price
       imageItem.appendChild(spanPrice2); // Add second price
       imageContainer.appendChild(imageItem);

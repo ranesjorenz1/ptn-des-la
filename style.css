@@ -27,29 +27,35 @@
 
 .image-item .number1 {
   top: 58px;
-  left: 103px;
+  left: 75px;
 }
 
 .image-item .number2 {
   top: 58px;
-  left: 210px;
+  left: 180px;
 }
 
 .price1,
-.price2 {
+.price2,
+.signature {
   position: absolute;
   padding: 5px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #2f5597;
   font-family: "Times New Roman", Times, serif;
 }
 .price1 {
   top: 27px;
-  left: 104px;
+  left: 75px;
 }
 .price2 {
   top: 27px;
-  left: 210px;
+  left: 180px;
+}
+.signature {
+  top: 63px;
+  left: 260px;
+  font-size: 10px;
+  font-weight: bolder;
 }
