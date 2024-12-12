@@ -80,6 +80,16 @@
   top: 5px;
   left: 4px;
 }
+.removed {
+  position: absolute;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  top: -6px;
+  left: 375px;
+  font-weight: 900;
+  color: rgb(214, 54, 54);
+  cursor: pointer;
+}
 .price1 {
   top: 32px;
   left: 75px;

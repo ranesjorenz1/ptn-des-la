@@ -54,6 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
       span2.className = "number2";
       span2.textContent = `NO.${i}`;
 
+      // const removed = document.createElement("span");
+      // removed.className = "removed";
+      // removed.textContent = "x";
+
       const spanPrice1 = document.createElement("span");
       spanPrice1.className = "price1";
       if (!isNaN(pricePerImage)) {
@@ -70,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         spanPrice2.textContent = "Price: N/A"; // Default if price is not entered
       }
 
+      // imageItem.appendChild(removed);
       imageItem.appendChild(img);
       imageItem.appendChild(span1);
       imageItem.appendChild(span2);
