@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const startInput = document.getElementById("start");
   const endInput = document.getElementById("end");
   const atvInput = document.getElementById("atv");
+  const editCheckbox = document.getElementById("edit");
 
   function generateImages(start, end, pricePerImage) {
     imageContainer.innerHTML = ""; // Clear existing images
@@ -31,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
       coupon.textContent = `1 HOUR ATV COUPON`;
 
       const logotext = document.createElement("span");
-      coupon.className = "logotext";
-      coupon.textContent = "ATV & BUGCAR RENTAL";
+      logotext.className = "logotext";
+      logotext.textContent = "ATV & BUGCAR RENTAL";
 
       const address = document.createElement("span");
       address.className = "address";
@@ -54,10 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
       span2.className = "number2";
       span2.textContent = `NO.${i}`;
 
-      // const removed = document.createElement("span");
-      // removed.className = "removed";
-      // removed.textContent = "x";
-
       const spanPrice1 = document.createElement("span");
       spanPrice1.className = "price1";
       if (!isNaN(pricePerImage)) {
@@ -74,7 +71,14 @@ document.addEventListener("DOMContentLoaded", () => {
         spanPrice2.textContent = "Price: N/A"; // Default if price is not entered
       }
 
-      // imageItem.appendChild(removed);
+      const deleteButton = document.createElement("button");
+      deleteButton.className = "delete-button";
+      deleteButton.textContent = "x";
+      deleteButton.style.display = editCheckbox.checked ? "block" : "none";
+      deleteButton.addEventListener("click", () => {
+        imageContainer.removeChild(imageItem);
+      });
+
       imageItem.appendChild(img);
       imageItem.appendChild(span1);
       imageItem.appendChild(span2);
@@ -88,20 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
       imageItem.appendChild(contact);
       imageItem.appendChild(logoborder);
       imageItem.appendChild(outerborder);
-      // imageItem.appendChild([
-      //   {
-      //     img,
-      //     span1,
-      //     span2,
-      //     signature,
-      //     onehour,
-      //     coupon,
-      //     logotext,
-      //     spanPrice1,
-      //     spanPrice2,
-      //     address,
-      //   },
-      // ]);
+      imageItem.appendChild(deleteButton);
       imageContainer.appendChild(imageItem);
     }
   }
@@ -115,6 +106,13 @@ document.addEventListener("DOMContentLoaded", () => {
       generateImages(start, end, price);
     }
   }
+
+  editCheckbox.addEventListener("change", () => {
+    const deleteButtons = document.querySelectorAll(".delete-button");
+    deleteButtons.forEach((button) => {
+      button.style.display = editCheckbox.checked ? "inline-block" : "none";
+    });
+  });
 
   startInput.addEventListener("input", updateImages);
   endInput.addEventListener("input", updateImages);

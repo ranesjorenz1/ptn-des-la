@@ -127,3 +127,29 @@ label {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: 900;
 }
+.delete-button {
+  position: absolute;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  left: 400px;
+  margin-top: -50px;
+}
+Button {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-buttom: 1px;
+}
+.delete-button:hover {
+  background-color: darkred;
+}
+@media print {
+  .col-md-12 {
+    display: none;
+  }
+  .delete-button {
+    display: none;
+  }
+}
